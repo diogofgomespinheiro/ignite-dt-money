@@ -1,15 +1,21 @@
-import logoImg from '../../assets/logo.svg';
+import logoImg from 'assets/logo.svg';
 
-import { Container, Content } from './styles';
+import * as Styled from './styles';
 
-function Header() {
+type HeaderProps = {
+  onOpenNewTransactionModal: () => void;
+};
+
+function Header({ onOpenNewTransactionModal }: HeaderProps) {
   return (
-    <Container>
-      <Content>
+    <Styled.Container>
+      <Styled.Content>
         <img src={logoImg} alt="dt money" />
-        <button type="button">New Transaction</button>
-      </Content>
-    </Container>
+        <button type="button" onClick={onOpenNewTransactionModal}>
+          New Transaction
+        </button>
+      </Styled.Content>
+    </Styled.Container>
   );
 }
 

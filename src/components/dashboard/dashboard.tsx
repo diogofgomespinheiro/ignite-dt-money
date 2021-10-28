@@ -1,14 +1,14 @@
-import Summary from '../summary';
-import TransactionsTable from '../transactions-table';
+import Summary from 'components/summary';
+import TransactionsTable from 'components/transactions-table';
 
-import { Container } from './styles';
+import * as Styled from './styles';
 
 function Dashboard() {
   return (
-    <Container>
+    <Styled.Container>
       <Summary />
       <TransactionsTable />
-    </Container>
+    </Styled.Container>
   );
 }
 
